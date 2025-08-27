@@ -23,22 +23,23 @@
 <body>
    <header class="">
       <!-- NAVBAR SECTION -->
-      <nav class="flex flex-col sm:flex-row justify-between items-center py-6 container mx-auto px-3 md:px-0">
+      <nav
+         class="flex flex-col sm:flex-row justify-between items-center gap-5 md:gap-0 py-6 container mx-auto px-3 md:px-0">
          <div class="flex gap-[10px] items-center">
             <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="logo">
             <h3 class="text-[#006747] font-bold text-2xl">Emergency <br> Service</h3>
          </div>
          <div class="flex items-center gap-5">
-            <div class="flex items-center gap-[10px] py-3 px-[35.5px] bg-[#41ff6b1a] rounded-[50px]">
-               <span class="inter text-base font-black text-black" id="heart-count">0</span>
+            <div class="flex items-center gap-[10px] py-3 px-6 md:px-[35.5px] bg-[#41ff6b1a] rounded-[50px]">
+               <span class="inter text-sm md:text-base font-black text-black" id="heart-count">0</span>
                <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="heart">
             </div>
             <div class="flex items-center gap-[10px] py-[14px] px-5 bg-[#41ff6b1a] rounded-[50px]">
-               <span class="inter text-base font-black text-black" id="coin-count">100</span>
+               <span class="inter text-sm md:text-base font-black text-black" id="coin-count">100</span>
                <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="coin">
             </div>
             <button
-               class="inter text-base font-semibold text-white bg-[#00A63E] py-[14px] px-[36px] rounded-[50px]"><span
+               class="inter text-sm md:text-base font-semibold text-white bg-[#00A63E] py-[14px] px-6 md:px-[36px] rounded-[50px]"><span
                   id="copy-count">0</span>
                Copy</button>
          </div>
@@ -46,7 +47,7 @@
 
       <!-- Banner part -->
       <div
-         class="py-[21px] bg-[#013223] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col items-center justify-center space-y-[11px] text-center">
+         class="py-[21px] bg-[#013223] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col items-center justify-center space-y-[11px] text-center px-3 md:px-0">
          <img class="w-[92px] h-[92px]" src="./assets/logo-dark.png" alt="logo-dark">
          <h2 class="text-white hind font-bold text-[40px]">Emergency Service Directory</h2>
          <p class="hind font-semibold text-xl text-white">Government Emergency Services at Your Fingertip - A Project by
@@ -62,7 +63,8 @@
       <div class="container mx-auto px-3 md:px-0">
          <div class="grid grid-cols-12 gap-[30px]">
             <!-- CARD SECTION -->
-            <section id="card" class="col-span-10 border grid grid-cols-3 gap-[30px]">
+            <section id="card"
+               class="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] shadow-lg rounded-xl">
                <!-- CARD 1 -->
                <div class="p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
@@ -344,8 +346,77 @@
                </div>
             </section>
             <!-- CALL HISTORY SECTION -->
-            <aside id="call-history-container" class="col-span-2 border">
-
+            <aside id="call-history-container" class="col-span-12 lg:col-span-3 p-6 bg-white shadow-lg rounded-xl">
+               <div class="flex justify-between items-center mb-4">
+                  <p class="roboto font-medium text-xl text-[#111111]">
+                     <i class="fa-regular fa-clock text-[#5C5C5C]"></i>
+                     Call History
+                  </p>
+                  <button id="clear-btn"
+                     class="py-[14px] px-[36px] bg-[#00A63E] rounded-[50px] cursor-pointer text-white inter font-semibold text-base">Clear</button>
+               </div>
+               <div class="space-y-2">
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+                  <div
+                     class="p-4 bg-[#FAFAFA] hover:shadow-md transition-all flex justify-between items-center rounded-lg gap-3 md:gap-0">
+                     <div>
+                        <h3 class="text-lg inter font-semibold text-[#111111]">Fire Service Number</h3>
+                        <p class="text-[#5C5C5C] font-normal text-lg hind">999</p>
+                     </div>
+                     <div>
+                        <p class="text-[#111111] font-normal text-lg hind">11:36:58 AM</p>
+                     </div>
+                  </div>
+               </div>
             </aside>
          </div>
       </div>
