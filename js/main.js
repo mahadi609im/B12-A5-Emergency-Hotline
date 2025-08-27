@@ -37,10 +37,51 @@ for (let card of cards) {
 // CALL FUNCTIONALITY / DELEGATE
 for (let card of cards) {
   card.addEventListener('click', e => {
-    let cardTitle = card.querySelector('.card-title').innerText;
-    let number = card.querySelector('.number-cls').innerText;
+    let coinCountId = getId('coin-count');
+    let coinCount = parseInt(coinCountId.innerText);
     if (e.target.closest('.card-call-btn')) {
-      alert(`📞 calling ${cardTitle} ${number}...`);
+      if (coinCount < 20) {
+        alert(
+          '❌ You dont have enough coins, You need at least 20 coins to call.'
+        );
+        return;
+      } else {
+        let updateCoinCount = coinCount - 20;
+        coinCountId.innerText = updateCoinCount;
+        let cardTitle = card.querySelector('.card-title').innerText;
+        let number = card.querySelector('.number-cls').innerText;
+        alert(`📞 calling ${cardTitle} ${number}...`);
+        let newDate = new Date();
+        let updateDate = newDate.toLocaleTimeString();
+        let callHistoyList = getId('call-histoy-list');
+        let callHistory = document.createElement('div');
+        callHistory.classList.add(
+          'p-4',
+          'bg-[#FAFAFA]',
+          'hover:shadow-md',
+          'transition-all',
+          'flex',
+          'justify-between',
+          'items-center',
+          'rounded-lg',
+          'gap-3',
+          'md:gap-0'
+        );
+        callHistory.innerHTML = `
+            <div>
+               <h3 class="text-lg inter font-semibold text-[#111111]">${cardTitle}</h3>
+               <p class="text-[#5C5C5C] font-normal text-lg hind">${number}</p>
+            </div>
+            <div>
+               <p class="text-[#111111] font-normal text-lg hind">${updateDate}</p>
+            </div>
+         `;
+        callHistoyList.appendChild(callHistory);
+
+        let noHistory = getId('no-history');
+        noHistory.style.display = 'none';
+        console.log(noHistory);
+      }
     }
   });
 }
