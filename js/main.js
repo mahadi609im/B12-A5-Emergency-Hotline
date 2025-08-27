@@ -87,17 +87,21 @@ for (let card of cards) {
          `;
         callHistoryList.appendChild(callHistory);
 
-        // CLEAR LIST
-        let clearBtn = getId('clear-btn');
-        clearBtn.addEventListener('click', () => {
-          callHistoryList.replaceChildren();
-          let noHistory = getId('no-history');
-          noHistory.style.display = 'block';
-        });
-
         let noHistory = getId('no-history');
         noHistory.style.display = 'none';
       }
     }
   });
 }
+
+// CLEAR LIST
+let clearBtn = getId('clear-btn');
+clearBtn.addEventListener('click', () => {
+  let clearAlert = confirm('⚠️ Are you sure ?');
+  if (clearAlert) {
+    let callHistoryList = getId('call-history-list');
+    callHistoryList.replaceChildren();
+    let noHistory = getId('no-history');
+    noHistory.style.display = 'block';
+  }
+});
