@@ -5,6 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Emergency Service</title>
+   <!-- FAVICON -->
+   <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
    <!-- STYLES LIBRARY -->
    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -19,7 +21,30 @@
 </head>
 
 <body>
+   <header class="container mx-auto px-3 md:px-0">
+      <!-- NAVBAR SECTION -->
+      <nav class="flex flex-col sm:flex-row justify-between items-center py-6">
+         <div class="flex gap-[10px] items-center">
+            <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="logo">
+            <h3 class="text-[#006747] font-bold text-2xl">Emergency <br> Service</h3>
+         </div>
+         <div class="flex items-center gap-5">
+            <div class="flex items-center gap-[10px] py-3 px-[35.5px] bg-[#41ff6b1a] rounded-[50px]">
+               <span class="inter text-base font-black text-black" id="heart-count">0</span>
+               <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="heart">
+            </div>
+            <div class="flex items-center gap-[10px] py-[14px] px-5 bg-[#41ff6b1a] rounded-[50px]">
+               <span class="inter text-base font-black text-black" id="coin-count">100</span>
+               <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="coin">
+            </div>
+            <button
+               class="inter text-base font-semibold text-white bg-[#00A63E] py-[14px] px-[36px] rounded-[50px]"><span
+                  id="copy-count">0</span>
+               Copy</button>
+         </div>
+      </nav>
 
+   </header>
 </body>
 
 </html>
