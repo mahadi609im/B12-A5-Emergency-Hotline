@@ -34,6 +34,7 @@ for (let card of cards) {
   });
 }
 
+let count = 0;
 // CALL FUNCTIONALITY / DELEGATE
 for (let card of cards) {
   card.addEventListener('click', e => {
@@ -46,16 +47,24 @@ for (let card of cards) {
         );
         return;
       } else {
+        // DISCRIESE COINS
         let updateCoinCount = coinCount - 20;
         coinCountId.innerText = updateCoinCount;
+
+        // CALLING ALERT
         let cardTitle = card.querySelector('.card-title').innerText;
         let number = card.querySelector('.number-cls').innerText;
         alert(`📞 calling ${cardTitle} ${number}...`);
+
+        // CURRENT TIME
         let newDate = new Date();
         let updateDate = newDate.toLocaleTimeString();
-        let callHistoyList = getId('call-histoy-list');
+
+        // LIST DYNAMIC SET
+        let callHistoryList = getId('call-history-list');
         let callHistory = document.createElement('div');
         callHistory.classList.add(
+          'call-history',
           'p-4',
           'bg-[#FAFAFA]',
           'hover:shadow-md',
@@ -76,11 +85,18 @@ for (let card of cards) {
                <p class="text-[#111111] font-normal text-lg hind">${updateDate}</p>
             </div>
          `;
-        callHistoyList.appendChild(callHistory);
+        callHistoryList.appendChild(callHistory);
+
+        // CLEAR LIST
+        let clearBtn = getId('clear-btn');
+        clearBtn.addEventListener('click', () => {
+          callHistoryList.replaceChildren();
+          let noHistory = getId('no-history');
+          noHistory.style.display = 'block';
+        });
 
         let noHistory = getId('no-history');
         noHistory.style.display = 'none';
-        console.log(noHistory);
       }
     }
   });
