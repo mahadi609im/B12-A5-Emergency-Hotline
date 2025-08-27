@@ -89,6 +89,8 @@ for (let card of cards) {
 
         let noHistory = getId('no-history');
         noHistory.style.display = 'none';
+
+        count += 1;
       }
     }
   });
@@ -96,12 +98,17 @@ for (let card of cards) {
 
 // CLEAR LIST
 let clearBtn = getId('clear-btn');
+
 clearBtn.addEventListener('click', () => {
-  let clearAlert = confirm('⚠️ Are you sure ?');
-  if (clearAlert) {
-    let callHistoryList = getId('call-history-list');
-    callHistoryList.replaceChildren();
-    let noHistory = getId('no-history');
-    noHistory.style.display = 'block';
+  let callHistoryList = getId('call-history-list');
+  let callHistory = callHistoryList.querySelector('.call-history');
+  if (callHistory !== null) {
+    let clearAlert = confirm('⚠️ Are you sure ?');
+    if (clearAlert) {
+      console.log(callHistoryList);
+      callHistoryList.replaceChildren();
+      let noHistory = getId('no-history');
+      noHistory.style.display = 'block';
+    }
   }
 });
