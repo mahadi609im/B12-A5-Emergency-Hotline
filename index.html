@@ -63,14 +63,14 @@
       <div class="container mx-auto px-3 md:px-0">
          <div class="grid grid-cols-12 gap-[30px]">
             <!-- CARD SECTION -->
-            <section id="card"
+            <section id="card-container"
                class="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] shadow-lg rounded-xl">
                <!-- CARD 1 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/emergency.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -78,13 +78,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">National Emergency</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">All</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -97,11 +97,11 @@
                   </div>
                </div>
                <!-- CARD 2 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/police.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -109,13 +109,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Police</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Police</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -128,11 +128,11 @@
                   </div>
                </div>
                <!-- CARD 3 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/fire-service.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -140,13 +140,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Fire Service</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">999</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Fire</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -159,11 +159,11 @@
                   </div>
                </div>
                <!-- CARD 4 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/ambulance.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -171,13 +171,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Ambulance</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">1994-999999</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">1994-999999</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Health</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -190,11 +190,11 @@
                   </div>
                </div>
                <!-- CARD 5 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/emergency.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -202,13 +202,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Women & Child Helpline</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">109</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">109</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Help</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -221,11 +221,11 @@
                   </div>
                </div>
                <!-- CARD 6 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/emergency.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -233,13 +233,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Anti-Corruption</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">106</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">106</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Govt.</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -252,11 +252,11 @@
                   </div>
                </div>
                <!-- CARD 7 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/emergency.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -264,13 +264,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Electricity Outage</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">16216</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">16216</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Electricity</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -283,11 +283,11 @@
                   </div>
                </div>
                <!-- CARD 8 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8" src="./assets/brac.png"
                            alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -295,13 +295,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Brac</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">16445</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">16445</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">NGO</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -314,11 +314,11 @@
                   </div>
                </div>
                <!-- CARD 9 -->
-               <div class="p-8 bg-white shadow-lg">
+               <div class="card p-8 bg-white shadow-lg">
                   <div class="flex justify-between items-center">
                      <div class="p-[14px] bg-[#FFE3E2] rounded-2xl"><img class="w-8 h-8"
                            src="./assets/Bangladesh-Railway.png" alt="emergency"></div>
-                     <i class="fa-regular fa-heart cursor-pointer text-2xl"></i>
+                     <i class="fa-regular fa-heart heart-icon cursor-pointer text-2xl"></i>
                   </div>
                   <div class="space-y-6 mt-3">
                      <div>
@@ -326,13 +326,13 @@
                         <p class="roboto font-normal text-lg text-[#5C5C5C]">Bangladesh Railway</p>
                      </div>
                      <div>
-                        <h4 class="text-[32px] font-bold text-[#111111] roboto pb-0.5">163</h4>
+                        <h4 class="number-cls text-[32px] font-bold text-[#111111] roboto pb-0.5">163</h4>
                         <span
                            class="py-[6] px-[16px] bg-[#F2F2F2] hind font-normal text-lg text-[#5C5C5C] rounded-full">Travel</span>
                      </div>
                      <div class="flex justify-between gap-2">
-                        <button id="card-copy-btn"
-                           class="block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
+                        <button
+                           class="card-copy-btn block py-[10.5px] w-full bg-white text-[#5C5C5C] roboto font-base font-normal border border-[#D4D6D5] rounded-lg cursor-pointer">
                            <i class="fa-regular fa-copy"></i>
                            Copy
                         </button>
@@ -421,6 +421,10 @@
          </div>
       </div>
    </main>
+
+
+   <!-- SCRIPT CONNECT -->
+   <script src="js/main.js"></script>
 </body>
 
 </html>
