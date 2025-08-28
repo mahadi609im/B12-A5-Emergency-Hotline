@@ -1,5 +1,7 @@
 # Assignment 5 - Emergency Hotline
 
+### Dom related some questions : ⬇️
+
 >### Question 1️⃣
 
 What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll** ?
@@ -197,5 +199,15 @@ What is **Event Delegation** in JavaScript? Why is it useful?
 
 
 - **পারফরম্যান্স ভালো হয়** → অনেকগুলো listener add না করেই কাজ হয়।
+
+---
+
+
+>### Question 5️⃣
+
+What is the difference between **preventDefault() and stopPropagation()** methods? ?
+
+
+### Answer :  <br> 
 
 ---
