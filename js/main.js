@@ -116,7 +116,6 @@ clearBtn.addEventListener('click', () => {
   if (callHistory !== null) {
     let clearAlert = confirm('⚠️ Are you sure ?');
     if (clearAlert) {
-      console.log(callHistoryList);
       callHistoryList.replaceChildren();
       let noHistory = getId('no-history');
       noHistory.style.display = 'block';
