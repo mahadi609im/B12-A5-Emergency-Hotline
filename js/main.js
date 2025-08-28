@@ -3,6 +3,17 @@ function getId(id) {
   return document.getElementById(id);
 }
 
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 640) {
+    let br = document.getElementById('brk')
+    br.style.display = 'none'
+  } else {
+    let br = document.getElementById('brk')
+    br.style.display = 'block'
+  }
+})
+
+
 let cards = document.querySelectorAll('.card');
 
 // HEART ICON CLICK COUNT
