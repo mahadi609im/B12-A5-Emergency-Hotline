@@ -89,3 +89,90 @@ How do you **create and insert a new element into the DOM**?
 </script>
 ```
 ---
+
+
+>### Question 3️⃣
+
+What is **Event Bubbling** and how does it work ?
+
+### Answer :  <br> 
+
+**Event Bubbling** হলো child element-এ কোনো event ঘটলে সেটা ধাপে ধাপে তার **parent** → **grandparent** → **root document** পর্যন্ত উপরে উঠতে থাকে। <br>
+মানে → event নিচ থেকে শুরু হয়ে উপরের দিকে যায়।
+(ঠিক যেমন পানির বুদবুদ নিচ থেকে ওপরে উঠে আসে। তাই নাম "bubbling")
+
+
+`—(capturing)—`  (find target) <br>
+[Window] <br>
+   ↓  <br>
+[Document] <br>
+   ↓ <br>
+[Parent Div] <br>
+   ↓ <br>
+[Child Div] <br>
+   ↓ <br>
+[Button]  ← target (event ঘটল এখানে)
+
+`—(bubbling)—` (target থেকে উপরে ওঠা) <br>
+[Window] <br>
+   ↑ <br>
+[Document] <br>
+   ↑ <br>
+[Parent Div] <br>
+   ↑ <br>
+[Child Div] <br>
+   ↑ <br>
+[Button]  ← target (event ঘটল এখানে)
+
+``` js
+<body>
+   <h1>Explore Event bubble</h1>
+   <section class="sec" id="secs">
+      <h3>List of Things</h3>
+      <ul id="list-container">
+         <li id="item-1">list item - 1.</li>
+         <li id="item-2">list item - 2.</li>
+         <li id="item-3">list item - 3.</li>
+         <button id="btn">add items</button>
+      </ul>
+   </section>
+
+   <script>
+      document.getElementById('btn').addEventListener('click', () => {
+         console.log('Add button clicked');
+      });
+
+
+      document.getElementById('list-container').addEventListener('click', () => {
+         console.log('list container clicked');
+      });
+
+
+      document.getElementsByClassName('sec')[0].addEventListener('click', () => {
+         console.log('section clicked');
+      });
+
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+         console.log('body te click');
+      });
+
+   </script>
+</body>
+```
+
+👉 এখন যদি তুমি শুধু `add items` -এ ক্লিক করি :
+
+```
+Output হবে:
+- Add button clicked
+- list container clicked
+- section clicked
+- body te click
+```
+এটাই event bubbling.
+
+#### `stopImmediatePropagation()` : 
+stopImmediatePropagation এর মাধ্যমে যেখানে event trigger করবে, ওখানেই event থামানো যাবে।
+
+---
