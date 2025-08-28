@@ -1,0 +1,34 @@
+<body>
+   <h1>Explore Event bubble</h1>
+   <section class="sec" id="secs">
+      <h3>List of Things</h3>
+      <ul id="list-container">
+         <li id="item-1">list item - 1.</li>
+         <li id="item-2">list item - 2.</li>
+         <li id="item-3">list item - 2.</li>
+         <button id="btn">add items</button>
+      </ul>
+   </section>
+
+   <script>
+      document.getElementById('btn').addEventListener('click', () => {
+         console.log('Add button clicked');
+      });
+
+
+      document.getElementById('list-container').addEventListener('click', () => {
+         console.log('list container clicked');
+      });
+
+
+      document.getElementsByClassName('sec')[0].addEventListener('click', () => {
+         console.log('section clicked');
+      });
+
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+         console.log('body te click');
+      });
+
+   </script>
+</body>

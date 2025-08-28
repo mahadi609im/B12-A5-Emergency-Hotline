@@ -1,165 +1,206 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
+>### Question 1️⃣
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
+What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll** ?
 
-### 📅 No Deadline For 50 marks
+  
+### Answer :  <br> 
 
-### 📅 Deadline For 30 marks: Any time after 29th August.
+1. `getElementById` : একটা নির্দিষ্ট Id এর element return করে । Id অবশ্যই *unique* হতে হবে । 
 
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
-
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
+**Example** : 
+``` js
+let x = document.getElementById('heart-count')
+console.log(x);
 ```
 
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
+2. `getElementsByClassName` : একী class Name এর সব element return করে । HTMLCollection দেয়, array like object মানে দেখতে array এর মতো কিন্তু array না । 
 
-💡Hint: Search Google with that below question
+`Live collection` dom update হলে automatic update হয়ে যায় । 
 
-```bash
-How to get current local time in js
+**Example** : 
+``` js
+let x = document.getElementsByClassName('card')
+console.log(x);
 ```
 
+3. `querySelector / querySelectorAll` : css selector এর মতো করে select করে যেমন Id হলে `#`, class হলে `.`, Tag `p` এরকম ভাবেই করা যায় । 
+
+**`💠querySelector `** : CSS selector এর মাধ্যমে শুধু প্রথম matching element (*HTMLElement*) return করে ।
+
+**Example** : 
+``` js
+// div element
+let firstDiv = document.querySelector('div');
+
+// class="box" element 
+let firstBox = document.querySelector('.box');
+
+// id="main-header" element 
+let header = document.querySelector('#main-header');
+
+```
+
+**`💠querySelectorAll `** : CSS selector এর মাধ্যমে সব matching element (*NodeList*) return করে ।
+
+**Example** : 
+``` js
+// div element
+let firstDiv = document.querySelectorAll('div');
+
+// class="box" element 
+let firstBox = document.querySelectorAll('.box');
+
+//  p element 
+let header = document.querySelectorAll('p');
+
+```
+`Static collection` dom update হলে automatic update হয়ে না ।
+
 ---
 
-## ⚙️ Technology Stack
+> ### Question 2️⃣
 
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
+How do you **create and insert a new element into the DOM**?
+
+  
+### Answer :  <br> 
+ 
+``` js
+<div id="card-container">
+   <p id="discription">Lorem ipsum dolor sit amet.</p>
+</div>
+
+<script>
+   // 1️⃣ Create new elements
+   let cardTitle = document.createElement('h1');
+   let button = document.createElement('button');
+
+   // 2️⃣ Add content & style
+   cardTitle.innerText = 'I am a beautyful Card';
+   cardTitle.style.color = 'pink';
+   button.innerText = 'click me';
+
+   // 3️⃣ Insert into DOM
+   let parent = document.getElementById('card-container');
+   let discription = document.getElementById('discription');
+
+   parent.insertBefore(cardTitle, discription); // insert before
+   parent.appendChild(button); // after add parents
+</script>
+```
+---
+
+>### Question 3️⃣
+
+What is **Event Bubbling** and how does it work ?
+
+### Answer :  <br> 
+
+**Event Bubbling** হলো child element-এ কোনো event ঘটলে সেটা ধাপে ধাপে তার **parent** → **grandparent** → **root document** পর্যন্ত উপরে উঠতে থাকে। <br>
+মানে → event নিচ থেকে শুরু হয়ে উপরের দিকে যায়।
+(ঠিক যেমন পানির বুদবুদ নিচ থেকে ওপরে উঠে আসে। তাই নাম "bubbling")
+
+
+`—(capturing)—`  (find target) <br>
+[Window] <br>
+   ↓  <br>
+[Document] <br>
+   ↓ <br>
+[Parent Div] <br>
+   ↓ <br>
+[Child Div] <br>
+   ↓ <br>
+[Button]  ← target (event ঘটল এখানে)
+
+`—(bubbling)—` (target থেকে উপরে ওঠা) <br>
+[Window] <br>
+   ↑ <br>
+[Document] <br>
+   ↑ <br>
+[Parent Div] <br>
+   ↑ <br>
+[Child Div] <br>
+   ↑ <br>
+[Button]  ← target (event ঘটল এখানে)
+
+``` js
+<body>
+   <h1>Explore Event bubble</h1>
+   <section class="sec" id="secs">
+      <h3>List of Things</h3>
+      <ul id="list-container">
+         <li id="item-1">list item - 1.</li>
+         <li id="item-2">list item - 2.</li>
+         <li id="item-3">list item - 3.</li>
+         <button id="btn">add items</button>
+      </ul>
+   </section>
+
+   <script>
+      document.getElementById('btn').addEventListener('click', () => {
+         console.log('Add button clicked');
+      });
+
+
+      document.getElementById('list-container').addEventListener('click', () => {
+         console.log('list container clicked');
+      });
+
+
+      document.getElementsByClassName('sec')[0].addEventListener('click', () => {
+         console.log('section clicked');
+      });
+
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+         console.log('body te click');
+      });
+
+   </script>
+</body>
+```
+
+👉 এখন যদি তুমি শুধু `add items` -এ ক্লিক করি :
+
+```
+Output হবে:
+- Add button clicked
+- list container clicked
+- section clicked
+- body te click
+```
+এটাই event bubbling.
+
+#### `stopImmediatePropagation()` : 
+stopImmediatePropagation এর মাধ্যমে যেখানে event trigger করবে, ওখানেই event থামানো যাবে।
 
 ---
 
-## 📌 Rules
 
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
+>### Question 4️⃣
+
+What is **Event Delegation** in JavaScript? Why is it useful?
+
+### Answer :  <br> 
+ 
+`Event delegation` হলো একটা parent element এ event listener লাগানো, তারপর সেই parent এর ভেতরে যেকোনো child element-এ event ঘটলে সেটা **bubbling-এর** মাধ্যমে ধরা।
+মানে → অনেক child element এর জন্য আলাদা listener না দিয়ে, parent এ একটা listener দিলেই সব child এর event handle করা যায়।
+
+**`🔹 Why is it useful ❓`** <br>
+   - **কম কোড লাগে** → ১০০টা child থাকলেও parent এ একটাই listener।
+
+   - **Dynamic element handle হয়** → পরে নতুন child add করলে তার জন্য আলাদা event লাগাতে হয় না।
+
+
+- **পারফরম্যান্স ভালো হয়** → অনেকগুলো listener add না করেই কাজ হয়।
+
+
+>### Question 1️⃣
+
+What is the difference between **preventDefault() and stopPropagation()** methods? ?
+
+
+### Answer :  <br> 
+
 
 ---
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
