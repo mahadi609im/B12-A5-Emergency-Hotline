@@ -61,6 +61,8 @@ let header = document.querySelectorAll('p');
 `Static collection` dom update হলে automatic update হয়ে না ।
 
 ---
+### Difference betweens-
+
  - `getElementById` : একটা নির্দিষ্ট Id এর element return করে ।
  
 - `getElementsByClassName` : একী class Name এর সব element return করে । 
@@ -349,6 +351,7 @@ Output হবে:
 Output হবে:
 - Add button clicked
 ```
+### Difference betweens- 
 
  - `preventDefault()` : Browser এর **Default Behavior** বন্ধ করে ।
 
