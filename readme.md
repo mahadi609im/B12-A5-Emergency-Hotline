@@ -61,6 +61,14 @@ let header = document.querySelectorAll('p');
 `Static collection` dom update হলে automatic update হয়ে না ।
 
 ---
+ - `getElementById` : একটা নির্দিষ্ট Id এর element return করে ।
+ 
+- `getElementsByClassName` : একী class Name এর সব element return করে । 
+
+- `querySelector / querySelectorAll` : css selector এর মতো করে select করে `(class: . ,id: # ,tag: p)` দিয়ে । 
+
+
+---
 
 > ### Question 2️⃣
 
@@ -128,6 +136,8 @@ What is **Event Bubbling** and how does it work ?
    ↑ <br>
 [Button]  ← target (event ঘটল এখানে)
 
+
+**Example** :
 ``` js
 <body>
    <h1>Explore Event bubble</h1>
@@ -165,7 +175,7 @@ What is **Event Bubbling** and how does it work ?
 </body>
 ```
 
-👉 এখন যদি তুমি শুধু `add items` -এ ক্লিক করি :
+👉 এখন যদি আমি শুধু `add items` -এ ক্লিক করি :
 
 ```
 Output হবে:
@@ -210,4 +220,142 @@ What is the difference between **preventDefault() and stopPropagation()** method
 
 ### Answer :  <br> 
 
+
+✏️ `preventDefault()` : Browser এর **Default Behavior** বন্ধ করে । মানে event ঘটার পর ব্রাউজার এর by default action গুলা বন্ধ হয়ে যাবে ।  
+
+**Example** : 
+``` js
+<body>
+   <form action="#">
+      <input type="text" placeholder="Type your name" id="input-box">
+      <button id="btn">login</button>
+   </form>
+
+   <script>
+      document.getElementById('btn').addEventListener('click', () => {
+         let x = document.getElementById('input-box').value
+         console.log(x);
+      })
+
+   </script>
+</body>
+
+```
+**Explain** : 
+এখানে সমস্যা হচ্ছে button এ ক্লিক করলে সাথে সাথে reload হয়ে যাচ্ছে এবং output এসে আবার সাথে সাথে চলে যাচ্ছে, যা ব্রাউজার এর default behavior. <br>
+
+এটা কে  ঠিক করতে **preventDefault()** use করা হয় । 
+
+**Example** : 
+``` js
+   <script>
+      document.getElementById('btn').addEventListener('click', (e) => {
+         e.preventDefault()
+         let x = document.getElementById('input-box').value
+         console.log(x);
+      })
+
+   </script>
+</body>
+
+```
+
+✏️ `stopPropagation()` : 
+Event **bubbling/capturing** এ propagation বন্ধ করে । মানে child এ event trigger করলে parent, grand parent, document / root পর্যন্ত propagate হয় না । শুধু যাকে trigger করা হইছে সেই action করবে ।  
+
+**Example** : 
+
+``` js
+<body>
+   <h1>Explore Event bubble</h1>
+   <section class="sec" id="secs">
+      <h3>List of Things</h3>
+      <ul id="list-container">
+         <li id="item-1">list item - 1.</li>
+         <li id="item-2">list item - 2.</li>
+         <li id="item-3">list item - 3.</li>
+         <button id="btn">add items</button>
+      </ul>
+   </section>
+
+   <script>
+      document.getElementById('btn').addEventListener('click', () => {
+         console.log('Add button clicked');
+      });
+
+
+      document.getElementById('list-container').addEventListener('click', () => {
+         console.log('list container clicked');
+      });
+
+
+      document.getElementsByClassName('sec')[0].addEventListener('click', () => {
+         console.log('section clicked');
+      });
+
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+         console.log('body te click');
+      });
+
+   </script>
+</body>
+```
+
+👉 এখন যদি আমি শুধু `add items` -এ ক্লিক করি :
+
+```
+Output হবে:
+- Add button clicked
+- list container clicked
+- section clicked
+- body te click
+```
+
+**Explain** : 
+
+এখানে সমস্যা হচ্ছে add button এ ক্লিক করলে bubbling এর মাধ্যমে parent, grand parent, document / root পর্যন্ত action হচ্ছে । যেটা হওয়া একদমই উচিত না । আর এটার সমাধান হিসেবে  **`stopPropagation()`** use করা হয় । 
+
+**Example** : 
+``` js
+  <script>
+      // শুধু এই function এ ই stopPropagation ব্যাবহার করতে হবে । যেন button এ click করলে button ই শুধু action করে ।
+      document.getElementById('btn').addEventListener('click', (e) => {
+         e.stopPropagation()
+         console.log('Add button clicked');
+      });
+
+
+      document.getElementById('list-container').addEventListener('click', () => {
+         console.log('list container clicked');
+      });
+
+
+      document.getElementsByClassName('sec')[0].addEventListener('click', () => {
+         console.log('section clicked');
+      });
+
+
+      document.getElementsByTagName('body')[0].addEventListener('click', () => {
+         console.log('body te click');
+      });
+
+   </script>
+</body>
+
+```
+
+```
+Output হবে:
+- Add button clicked
+```
+
+ - `preventDefault()` : Browser এর **Default Behavior** বন্ধ করে ।
+
+- `stopPropagation()` : 
+Event bubbling/capturing এ propagation বন্ধ করে ।
+
+<br>
+
 ---
+## <p align='center'> The End  </p>
